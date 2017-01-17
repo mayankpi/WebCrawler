@@ -32,3 +32,39 @@ def append_to_file(path, data):
 def delete_file_content(path):
     with open(path, 'w'):
         pass
+
+#reading a file and creating a set out of it
+
+def file_to_set(file_name):
+    results = set()
+    for line in file_name:
+        results.add(line.replace('\n',''))
+    return results
+
+#converting the set to file
+def set_to_file(links, file):
+    delete_file_content(file)
+    for link in sorted(links):
+        append_to_file(file, link)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
