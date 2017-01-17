@@ -8,8 +8,8 @@ def create_project_dir(directory):
 #create_project_dir('mayankwebcrawler')
 
 def create_data_file(project_name, base_url):
-    queue = project_name + "queue.txt"
-    crawled = project_name + "crawled.txt"
+    queue = project_name + "/queue.txt"
+    crawled = project_name + "/scrawled.txt"
     if not os.path.isfile(queue):
         write_file(queue,base_url)
     if not os.path.isfile(crawled):
